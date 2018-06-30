@@ -1,0 +1,8 @@
+syntax: glob
+bin
+obj
+packages
+*.orig
+*.user
+*.suo
+.vs
