@@ -61,7 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acos.cs" />
+    <Compile Include="Asin.cs" />
+    <Compile Include="Atan.cs" />
+    <Compile Include="Cos.cs" />
+    <Compile Include="Cosh.cs" />
+    <Compile Include="Exp.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sin.cs" />
+    <Compile Include="Sinh.cs" />
+    <Compile Include="Sqrt.cs" />
+    <Compile Include="Tan.cs" />
+    <Compile Include="Tanh.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Bonsai.Numerics.nuspec" />
