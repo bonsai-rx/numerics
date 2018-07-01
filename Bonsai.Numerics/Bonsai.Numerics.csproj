@@ -66,6 +66,14 @@
     <Compile Include="Atan.cs" />
     <Compile Include="Cos.cs" />
     <Compile Include="Cosh.cs" />
+    <Compile Include="Distributions\CreateBinomial.cs" />
+    <Compile Include="Distributions\CreateContinuousUniform.cs" />
+    <Compile Include="Distributions\CreateExponential.cs" />
+    <Compile Include="Distributions\CreatePoisson.cs" />
+    <Compile Include="Distributions\CreateRandom.cs" />
+    <Compile Include="Distributions\CreateDiscreteUniform.cs" />
+    <Compile Include="Distributions\CreateNormal.cs" />
+    <Compile Include="Distributions\Sample.cs" />
     <Compile Include="Exp.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
