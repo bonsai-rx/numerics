@@ -1,6 +1,7 @@
 ﻿using MathNet.Numerics;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Bonsai.Numerics
 {
     [Combinator]
     [WorkflowElementCategory(ElementCategory.Transform)]
+    [Description("Generates a random permutation, without repetition, of all the elements in the input sequence.")]
     public class Permutation
     {
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bonsai.Numerics
 {
+    [Description("Calculates the larger of two numbers.")]
     public class Max : Transform<Tuple<double, double>, double>
     {
         public override IObservable<double> Process(IObservable<Tuple<double, double>> source)

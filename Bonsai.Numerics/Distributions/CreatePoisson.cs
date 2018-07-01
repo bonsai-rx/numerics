@@ -1,6 +1,7 @@
 ﻿using MathNet.Numerics.Distributions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -8,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace Bonsai.Numerics.Distributions
 {
+    [Description("Creates a discrete univariate poisson distribution.")]
     public class CreatePoisson : Source<Poisson>
     {
+        [Description("The lambda parameter of the poisson distribution.")]
         public double Lambda { get; set; }
 
         public override IObservable<Poisson> Generate()
