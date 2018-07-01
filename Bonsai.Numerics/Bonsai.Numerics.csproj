@@ -70,7 +70,7 @@
     <Compile Include="Distributions\CreateContinuousUniform.cs" />
     <Compile Include="Distributions\CreateExponential.cs" />
     <Compile Include="Distributions\CreatePoisson.cs" />
-    <Compile Include="Distributions\CreateRandom.cs" />
+    <Compile Include="CreateRandom.cs" />
     <Compile Include="Distributions\CreateDiscreteUniform.cs" />
     <Compile Include="Distributions\CreateNormal.cs" />
     <Compile Include="Distributions\Sample.cs" />

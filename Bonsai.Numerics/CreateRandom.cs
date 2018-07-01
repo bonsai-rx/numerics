@@ -5,7 +5,7 @@ using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bonsai.Numerics.Distributions
+namespace Bonsai.Numerics
 {
     public class CreateRandom : Source<Random>
     {
