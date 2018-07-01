@@ -1,6 +1,7 @@
 ﻿using MathNet.Numerics.Distributions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Bonsai.Numerics.Distributions
 {
+    [Description("Creates a continuous univariate uniform distribution.")]
     public class CreateContinuousUniform : Source<ContinuousUniform>
     {
         public CreateContinuousUniform()
@@ -15,8 +17,10 @@ namespace Bonsai.Numerics.Distributions
             Upper = 1;
         }
 
+        [Description("The lower bound of the uniform distribution.")]
         public double Lower { get; set; }
 
+        [Description("The upper bound of the uniform distribution.")]
         public double Upper { get; set; }
 
         public override IObservable<ContinuousUniform> Generate()

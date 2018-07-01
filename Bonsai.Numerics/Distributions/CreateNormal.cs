@@ -1,6 +1,7 @@
 ﻿using MathNet.Numerics.Distributions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Bonsai.Numerics.Distributions
 {
+    [Description("Creates a continuous univariate normal (gaussian) distribution.")]
     public class CreateNormal : Source<Normal>
     {
         public CreateNormal()
@@ -15,8 +17,10 @@ namespace Bonsai.Numerics.Distributions
             StdDev = 1;
         }
 
+        [Description("The mean of the normal distribution.")]
         public double Mean { get; set; }
 
+        [Description("The standard deviation of the normal distribution.")]
         public double StdDev { get; set; }
 
         public override IObservable<Normal> Generate()

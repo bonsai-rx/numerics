@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bonsai.Numerics
 {
+    [Description("Calculates a value indicating the sign of the specified number.")]
     public class Sign : Transform<double, int>
     {
         public override IObservable<int> Process(IObservable<double> source)
