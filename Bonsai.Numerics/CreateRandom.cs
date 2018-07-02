@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Bonsai.Numerics
 {
-    [Description("Creates a pseudo-random number generator with the specified seed.")]
+    [Description("Creates a random number generator using either a fixed, or time-dependent, seed.")]
     public class CreateRandom : Source<Random>
     {
-        [Description("An optional number used to calculate the starting value of the pseudo-random number sequence.")]
+        [Description("An optional number used to calculate the starting value for the pseudo-random sequence. If no seed is specifed, a time-dependent value is used.")]
         public int? Seed { get; set; }
 
         public override IObservable<Random> Generate()
