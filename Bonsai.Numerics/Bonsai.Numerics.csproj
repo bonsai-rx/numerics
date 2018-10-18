@@ -78,6 +78,7 @@
     <Compile Include="Distributions\CreateDiscreteUniform.cs" />
     <Compile Include="Distributions\CreateNormal.cs" />
     <Compile Include="Distributions\Sample.cs" />
+    <Compile Include="Distributions\SampleDistinct.cs" />
     <Compile Include="Distributions\SampleMany.cs" />
     <Compile Include="Exp.cs" />
     <Compile Include="Floor.cs" />
