@@ -13,7 +13,7 @@ namespace Bonsai.Numerics
     {
         public override IObservable<double> Process(IObservable<double> source)
         {
-            return source.Select(x => Math.Sinh(x));
+            return source.Select(Math.Sinh);
         }
     }
 }

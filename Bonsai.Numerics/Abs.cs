@@ -13,37 +13,37 @@ namespace Bonsai.Numerics
     {
         public override IObservable<double> Process(IObservable<double> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
 
         public IObservable<float> Process(IObservable<float> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
 
         public IObservable<decimal> Process(IObservable<decimal> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
 
         public IObservable<long> Process(IObservable<long> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
 
         public IObservable<int> Process(IObservable<int> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
 
         public IObservable<short> Process(IObservable<short> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
 
         public IObservable<sbyte> Process(IObservable<sbyte> source)
         {
-            return source.Select(x => Math.Abs(x));
+            return source.Select(Math.Abs);
         }
     }
 }

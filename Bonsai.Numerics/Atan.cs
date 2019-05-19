@@ -13,7 +13,7 @@ namespace Bonsai.Numerics
     {
         public override IObservable<double> Process(IObservable<double> source)
         {
-            return source.Select(x => Math.Atan(x));
+            return source.Select(Math.Atan);
         }
 
         public IObservable<double> Process(IObservable<Tuple<double, double>> source)
