@@ -13,7 +13,7 @@ namespace Bonsai.Numerics
     {
         public override IObservable<double> Process(IObservable<double> source)
         {
-            return source.Select(x => Math.Tanh(x));
+            return source.Select(Math.Tanh);
         }
     }
 }

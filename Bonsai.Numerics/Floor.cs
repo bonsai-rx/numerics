@@ -13,12 +13,12 @@ namespace Bonsai.Numerics
     {
         public override IObservable<double> Process(IObservable<double> source)
         {
-            return source.Select(x => Math.Floor(x));
+            return source.Select(Math.Floor);
         }
 
         public IObservable<decimal> Process(IObservable<decimal> source)
         {
-            return source.Select(x => Math.Floor(x));
+            return source.Select(Math.Floor);
         }
     }
 }
