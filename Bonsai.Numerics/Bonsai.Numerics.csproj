@@ -68,6 +68,8 @@
     <Compile Include="Asin.cs" />
     <Compile Include="Atan.cs" />
     <Compile Include="Ceiling.cs" />
+    <Compile Include="Combination.cs" />
+    <Compile Include="CombinationWithRepetition.cs" />
     <Compile Include="Cos.cs" />
     <Compile Include="Cosh.cs" />
     <Compile Include="DegreeToRadian.cs" />
@@ -98,6 +100,8 @@
     <Compile Include="Tan.cs" />
     <Compile Include="Tanh.cs" />
     <Compile Include="Truncate.cs" />
+    <Compile Include="Variation.cs" />
+    <Compile Include="VariationWithRepetition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Bonsai.Numerics.nuspec" />
