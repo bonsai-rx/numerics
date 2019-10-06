@@ -6,9 +6,9 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://bitbucket.org/horizongir/bonsai.numerics/raw/9e16d39618f607ed2eaf0e76d028a8f2a139c2a7/LICENSE</licenseUrl>
+    <licenseUrl>https://bonsai-rx.org/license</licenseUrl>
     <projectUrl>https://bitbucket.org/horizongir/bonsai.numerics</projectUrl>
-    <iconUrl>https://bitbucket.org/horizongir/bonsai/raw/7aacc64dc4647e57362ab310238591dc197fef0d/Resources/Bonsai.png</iconUrl>
+    <iconUrl>https://bonsai-rx.org/assets/images/bonsai.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <copyright>$author$ © 2019</copyright>
