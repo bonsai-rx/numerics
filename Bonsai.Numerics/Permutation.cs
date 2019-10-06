@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Bonsai.Numerics
 {
     [Combinator]
-    [WorkflowElementCategory(ElementCategory.Transform)]
+    [WorkflowElementCategory(ElementCategory.Combinator)]
     [Description("Generates a random permutation, without repetition, of all the elements in the input sequence.")]
     public class Permutation
     {
