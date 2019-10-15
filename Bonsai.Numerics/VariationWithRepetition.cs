@@ -17,31 +17,17 @@ namespace Bonsai.Numerics
         [Description("The number of elements to choose from the input sequence. Elements can be chosen more than once.")]
         public int Count { get; set; }
 
-        private TElement[] SelectVariationWithRepetition<TElement>(TElement[] elements)
-        {
-            return SelectVariationWithRepetition(elements, null);
-        }
-
-        private TElement[] SelectVariationWithRepetition<TElement>(TElement[] elements, Random randomSource)
-        {
-            var indices = Combinatorics.GenerateVariationWithRepetition(elements.Length, Count, randomSource);
-            var variation = new TElement[indices.Length];
-            for (int i = 0; i < variation.Length; i++)
-            {
-                variation[i] = elements[indices[i]];
-            }
-
-            return variation;
-        }
-
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source)
         {
-            return source.ToArray().SelectMany(SelectVariationWithRepetition);
+            return source.ToArray().SelectMany(elements => CombinatoricsHelper.SelectVariationWithRepetition(elements, Count));
         }
 
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source, IObservable<Random> random)
         {
-            return source.ToArray().Zip(random.FirstAsync(), SelectVariationWithRepetition).SelectMany(elements => elements);
+            return source.ToArray().Zip(
+                random.FirstAsync(),
+                (elements, randomSource) => CombinatoricsHelper.SelectVariationWithRepetition(elements, Count, randomSource))
+                .SelectMany(elements => elements);
         }
     }
 }

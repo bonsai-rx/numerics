@@ -17,31 +17,17 @@ namespace Bonsai.Numerics
         [Description("The number of elements to choose from the input sequence. Each element is chosen at most once.")]
         public int Count { get; set; }
 
-        private TElement[] SelectVariation<TElement>(TElement[] elements)
-        {
-            return SelectVariation(elements, null);
-        }
-
-        private TElement[] SelectVariation<TElement>(TElement[] elements, Random randomSource)
-        {
-            var indices = Combinatorics.GenerateVariation(elements.Length, Count, randomSource);
-            var variation = new TElement[indices.Length];
-            for (int i = 0; i < variation.Length; i++)
-            {
-                variation[i] = elements[indices[i]];
-            }
-
-            return variation;
-        }
-
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source)
         {
-            return source.ToArray().SelectMany(SelectVariation);
+            return source.ToArray().SelectMany(elements => CombinatoricsHelper.SelectVariation(elements, Count));
         }
 
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source, IObservable<Random> random)
         {
-            return source.ToArray().Zip(random.FirstAsync(), SelectVariation).SelectMany(elements => elements);
+            return source.ToArray().Zip(
+                random.FirstAsync(),
+                (elements, randomSource) => CombinatoricsHelper.SelectVariation(elements, Count, randomSource))
+                .SelectMany(elements => elements);
         }
     }
 }
