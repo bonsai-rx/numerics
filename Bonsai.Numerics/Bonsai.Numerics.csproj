@@ -1,136 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{781B2E09-F475-4CFD-A126-B3AD8C383699}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bonsai.Numerics</RootNamespace>
-    <AssemblyName>Bonsai.Numerics</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
+    <Title>Bonsai - Numerics Library</Title>
+    <Description>Bonsai Library providing methods and algorithms for common numerical computations.</Description>
+    <PackageTags>Bonsai Rx Numerics</PackageTags>
+    <TargetFramework>net462</TargetFramework>
+    <Version>0.6.0</Version>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <BuildPackage>true</BuildPackage>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Bonsai.Core, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bonsai.Core.2.4.0\lib\net45\Bonsai.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MathNet.Numerics, Version=4.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MathNet.Numerics.4.5.1\lib\net40\MathNet.Numerics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="Bonsai.Core" Version="2.5.0" />
+    <PackageReference Include="MathNet.Numerics" Version="4.5.1" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Abs.cs" />
-    <Compile Include="Acos.cs" />
-    <Compile Include="CombinatoricsHelper.cs" />
-    <Compile Include="Asin.cs" />
-    <Compile Include="Atan.cs" />
-    <Compile Include="Ceiling.cs" />
-    <Compile Include="Combination.cs" />
-    <Compile Include="CombinationWithRepetition.cs" />
-    <Compile Include="Cos.cs" />
-    <Compile Include="Cosh.cs" />
-    <Compile Include="DegreeToRadian.cs" />
-    <Compile Include="Distributions\CreateBinomial.cs" />
-    <Compile Include="Distributions\CreateContinuousUniform.cs" />
-    <Compile Include="Distributions\CreateExponential.cs" />
-    <Compile Include="Distributions\CreatePoisson.cs" />
-    <Compile Include="CreateRandom.cs" />
-    <Compile Include="Distributions\CreateDiscreteUniform.cs" />
-    <Compile Include="Distributions\CreateNormal.cs" />
-    <Compile Include="Distributions\Sample.cs" />
-    <Compile Include="Distributions\SampleArray.cs" />
-    <Compile Include="Distributions\SampleDistinct.cs" />
-    <Compile Include="Distributions\SampleMany.cs" />
-    <Compile Include="Exp.cs" />
-    <Compile Include="Floor.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="Log10.cs" />
-    <Compile Include="Max.cs" />
-    <Compile Include="Min.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Permutation.cs" />
-    <Compile Include="RadianToDegree.cs" />
-    <Compile Include="SelectCombination.cs" />
-    <Compile Include="SelectCombinationWithRepetition.cs" />
-    <Compile Include="SelectPermutation.cs" />
-    <Compile Include="SelectVariation.cs" />
-    <Compile Include="SelectVariationWithRepetition.cs" />
-    <Compile Include="Sign.cs" />
-    <Compile Include="Sin.cs" />
-    <Compile Include="Sinh.cs" />
-    <Compile Include="Sqrt.cs" />
-    <Compile Include="Tan.cs" />
-    <Compile Include="Tanh.cs" />
-    <Compile Include="Truncate.cs" />
-    <Compile Include="Variation.cs" />
-    <Compile Include="VariationWithRepetition.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Bonsai.Numerics.nuspec" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <StartAction>Program</StartAction>
-    <StartProgram>$(registry:HKEY_CURRENT_USER\Software\Goncalo Lopes\Bonsai@InstallDir)Bonsai.exe</StartProgram>
-    <StartArguments>--lib:"$(TargetDir)."</StartArguments>
-  </PropertyGroup>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
