@@ -5,7 +5,7 @@
     <Description>Bonsai Library providing methods and algorithms for common numerical computations.</Description>
     <PackageTags>Bonsai Rx Numerics</PackageTags>
     <TargetFramework>net462</TargetFramework>
-    <Version>0.6.0</Version>
+    <Version>0.7.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
