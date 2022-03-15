@@ -13,17 +13,14 @@ namespace Bonsai.Numerics
     {
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source)
         {
-            return source
-                .ToArray()
+            return source.ToArray()
                 .Do(elements => Combinatorics.SelectPermutationInplace(elements))
                 .SelectMany(elements => elements);
         }
 
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source, IObservable<Random> random)
         {
-            return source
-                .ToArray()
-                .Zip(random.FirstAsync(), (elements, randomSource) =>
+            return random.FirstAsync().Zip(source.ToArray(), (randomSource, elements) =>
                 {
                     Combinatorics.SelectPermutationInplace(elements, randomSource);
                     return elements;

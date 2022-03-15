@@ -20,9 +20,9 @@ namespace Bonsai.Numerics
 
         public IObservable<TElement> Process<TElement>(IObservable<TElement> source, IObservable<Random> random)
         {
-            return source.ToArray().Zip(
-                random.FirstAsync(),
-                (elements, randomSource) => CombinatoricsHelper.SelectCombination(elements, Count, randomSource))
+            return random.FirstAsync().Zip(
+                source.ToArray(),
+                (randomSource, elements) => CombinatoricsHelper.SelectCombination(elements, Count, randomSource))
                 .SelectMany(elements => elements);
         }
     }
