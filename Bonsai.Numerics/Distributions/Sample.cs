@@ -20,5 +20,15 @@ namespace Bonsai.Numerics.Distributions
         {
             return source.Select(distribution => distribution.Sample());
         }
+
+        public IObservable<int> Process<TSource>(IObservable<TSource> source, IObservable<IDiscreteDistribution> distribution)
+        {
+            return distribution.FirstAsync().SelectMany(d => source.Select(input => d.Sample()));
+        }
+
+        public IObservable<double> Process<TSource>(IObservable<TSource> source, IObservable<IContinuousDistribution> distribution)
+        {
+            return distribution.FirstAsync().SelectMany(d => source.Select(input => d.Sample()));
+        }
     }
 }
