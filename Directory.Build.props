@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <Authors>Gonçalo Lopes</Authors>
-    <Copyright>Copyright © Gonçalo Lopes 2020</Copyright>
+    <Copyright>Copyright © Gonçalo Lopes 2023</Copyright>
     <PackageProjectUrl>https://github.com/bonsai-rx/numerics</PackageProjectUrl>
     <PackageLicenseUrl>https://bonsai-rx.org/license</PackageLicenseUrl>
     <PackageIconUrl>https://bonsai-rx.org/assets/images/bonsai.png</PackageIconUrl>
