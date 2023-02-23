@@ -6,9 +6,13 @@
     <PackageProjectUrl>https://github.com/bonsai-rx/numerics</PackageProjectUrl>
     <PackageLicenseUrl>https://bonsai-rx.org/license</PackageLicenseUrl>
     <PackageIconUrl>https://bonsai-rx.org/assets/images/bonsai.png</PackageIconUrl>
-    <IncludeSymbols Condition="'$(Configuration)'=='Release'">true</IncludeSymbols>
-    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
     <PackageOutputPath>..\bin\$(Configuration)</PackageOutputPath>
+    <IncludeSymbols Condition="'$(Configuration)'=='Release'">true</IncludeSymbols>
+    <SymbolPackageFormat Condition="'$(Configuration)'=='Release'">snupkg</SymbolPackageFormat>
+    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/bonsai-rx/numerics.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <VersionSuffix></VersionSuffix>
     <Features>strict</Features>
   </PropertyGroup>
 </Project>
