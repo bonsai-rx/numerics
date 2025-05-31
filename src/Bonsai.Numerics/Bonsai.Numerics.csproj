@@ -3,9 +3,7 @@
   <PropertyGroup>
     <Title>Bonsai - Numerics Library</Title>
     <Description>Bonsai Library providing methods and algorithms for common numerical computations.</Description>
-    <PackageTags>Bonsai Rx Numerics</PackageTags>
     <TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
-    <VersionPrefix>0.9.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
